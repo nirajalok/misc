@@ -14,6 +14,7 @@ request = urllib2.Request(url + 'competitions?plan=TIER_ONE', headers=api_header
 response = urllib2.urlopen(request).read()
 values = json.loads(response)
 
+
 def printResultsAndMatchesForTeam(FavTeam):
 	for c in values['competitions']:
 		teamsUrl = url + 'competitions/' + str(c['id']) + '/teams'
